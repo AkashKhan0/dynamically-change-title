@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>webcoder.com - dynamically change your website title</title>
+
+    <link rel="shortcut icon" href="./logo.avif" type="image/x-icon" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+      }
+      body {
+        text-align: center;
+        padding: 50px 0px;
+      }
+      h1 {
+        font-size: 50px;
+      }
+    </style>
+    <script>
+      let docTitle = document.title;
+      window.addEventListener("blur", () => {
+        document.title = "Come back to me 😥";
+      });
+      window.addEventListener("focus", () => {
+        document.title = docTitle;
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Hello programmers!</h1>
+  </body>
+</html>
